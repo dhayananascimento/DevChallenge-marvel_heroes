@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-import './styles.js';
+import styles from './styles.js';
 
 export default function Details() {
   return (
