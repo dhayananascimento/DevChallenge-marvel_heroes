@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, ScrollView, TouchableOpacity} from 'react-native';
 
+import LinearGradient from 'react-native-linear-gradient';
+
 import styles from './styles.js';
 
 import Hero from '../../components/Hero';
@@ -38,25 +40,54 @@ export default function Home() {
         <Text style={styles.title}>Escolha o seu personagem</Text>
 
         <View style={styles.categories}>
-          <TouchableOpacity activeOpacity={0.6} style={[styles.category, {backgroundColor: 'blue'}]}>
-            <HeroIcon fill={'white'} />
+          <TouchableOpacity activeOpacity={0.6}>
+            <LinearGradient
+              start={{x: 0, y: 0}}
+              end={{x: 0, y: 1}}
+              colors={['#005BEA', '#00C6FB']}
+              style={[styles.category]}>
+              <HeroIcon />
+            </LinearGradient>
           </TouchableOpacity>
 
-          <TouchableOpacity activeOpacity={0.6} style={[styles.category, {backgroundColor: 'red'}]}>
-            <VillainIcon />
+          <TouchableOpacity activeOpacity={0.6}>
+            <LinearGradient
+              start={{x: 0, y: 0}}
+              end={{x: 0, y: 1}}
+              colors={['#ED1D24', '#ED1F69']}
+              style={[styles.category]}>
+              <VillainIcon />
+            </LinearGradient>
           </TouchableOpacity>
 
-          <TouchableOpacity activeOpacity={0.6}
-            style={[styles.category, {backgroundColor: 'purple'}]}>
-            <AntiheroIcon />
+          <TouchableOpacity activeOpacity={0.6}>
+            <LinearGradient
+              start={{x: 0, y: 0}}
+              end={{x: 0, y: 1}}
+              colors={['#B224EF', '#7579FF']}
+              style={[styles.category]}>
+              <AntiheroIcon />
+            </LinearGradient>
           </TouchableOpacity>
 
-          <TouchableOpacity activeOpacity={0.6} style={[styles.category, {backgroundColor: 'green'}]}>
-            <AlienIcon />
+          <TouchableOpacity activeOpacity={0.6}>
+            <LinearGradient
+              start={{x: 0, y: 0}}
+              end={{x: 0, y: 1}}
+              colors={['#0BA360', '#3CBA92']}
+              style={[styles.category]}>
+              <AlienIcon />
+            </LinearGradient>
           </TouchableOpacity>
 
-          <TouchableOpacity activeOpacity={0.6} style={[styles.category, {backgroundColor: 'pink'}]}>
-            <HumanIcon />
+          <TouchableOpacity activeOpacity={0.6}>
+            <LinearGradient
+              start={{x: 0, y: 0}}
+              end={{x: 0, y: 1}}
+              colors={['#FF7EB3', '#FF758C']}
+              style={[styles.category]}>
+              <HumanIcon />
+            </LinearGradient>
           </TouchableOpacity>
         </View>
 
