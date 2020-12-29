@@ -8,16 +8,16 @@ export default function Hero({data, images}) {
   const navigation = useNavigation();
 
   return (
-    <TouchableOpacity 
+    <TouchableOpacity activeOpacity={0.8} 
       onPress={() => {
         navigation.navigate('Details', {data: data, movies: images?.movies});
       }}>
       <ImageBackground
         source={images?.background}
-        style={styles.marvelHero}
+        style={styles.container}
         imageStyle={{borderRadius: 15}}>
-        <Text style={styles.heroAlterEgo}>{data?.alterEgo}</Text>
-        <Text style={styles.heroName}>{data?.name}</Text>
+        <Text style={styles.alterEgo}>{data?.alterEgo}</Text>
+        <Text style={styles.name}>{data?.name}</Text>
       </ImageBackground>
     </TouchableOpacity>
   );

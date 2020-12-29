@@ -1,20 +1,22 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  marvelHero: {
-    height: 260,
-    width: 145,
+  container: {
+    height: 240,
+    width: 140,
     padding: 10,
-    marginRight: 10,
+    marginHorizontal: 10,
+    borderRadius: 15,
+    overflow: 'hidden',
     justifyContent: 'flex-end',
   },
 
-  heroAlterEgo: {
-    fontSize: 16,
+  alterEgo: {
+    fontSize: 14,
     color: 'white',
   },
 
-  heroName: {
+  name: {
     fontSize: 24,
     color: 'white',
   },

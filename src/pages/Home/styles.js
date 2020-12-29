@@ -3,28 +3,43 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 15,
     backgroundColor: '#F8F8F8',
   },
 
-  options: {
+  categories: {
+    marginVertical: 20,
     flexDirection: 'row',
+    paddingHorizontal: 15,
+    justifyContent: "space-between"
+  },
+
+  category: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    
+    backgroundColor: 'blue',
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   subtileContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingHorizontal: 15,
   },
 
   heroesContainer: {
     width: '100%',
-    height: 300,
+    height: 240,
+    marginBottom: 10
   },
 
   title: {
     fontSize: 32,
     fontWeight: 'bold',
+    paddingHorizontal: 15,
   },
 
   subtitle: {
