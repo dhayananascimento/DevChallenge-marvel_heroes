@@ -10,14 +10,14 @@ export default function Hero({data, images}) {
   return (
     <TouchableOpacity activeOpacity={0.8} 
       onPress={() => {
-        navigation.navigate('Details', {data: data, movies: images?.movies});
+        navigation.navigate('Details', {data: data, movies:images?.movies, background: images?.background});
       }}>
       <ImageBackground
         source={images?.background}
         style={styles.container}
         imageStyle={{borderRadius: 15}}>
         <Text style={styles.alterEgo}>{data?.alterEgo}</Text>
-        <Text style={styles.name}>{data?.name}</Text>
+        <Text style={styles.name}>{(data?.name)?.replace(" ","\n")}</Text>
       </ImageBackground>
     </TouchableOpacity>
   );

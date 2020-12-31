@@ -19,7 +19,15 @@ export default function Routes() {
           name="Home"
           component={Home}
         />
-        <Screen name="Details" component={Details} />
+        <Screen
+          options={{
+            title: null,
+            headerTransparent: true
+            
+          }}
+          name="Details"
+          component={Details}
+        />
       </Navigator>
     </NavigationContainer>
   );
