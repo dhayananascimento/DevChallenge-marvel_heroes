@@ -22,8 +22,8 @@ export default function Routes() {
         <Screen
           options={{
             title: null,
-            headerTransparent: true
-            
+            headerTransparent: true,
+            headerTintColor: 'white',
           }}
           name="Details"
           component={Details}

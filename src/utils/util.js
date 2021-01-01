@@ -77,7 +77,7 @@ export const images = {
 
     punisher: {
       background: require('../assets/chars/punisher.png'),
-      movies: ['../assets/movies/punisher.jpg'],
+      movies: [require('../assets/movies/punisher.jpg')],
     },
   },
 

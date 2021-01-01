@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, ScrollView, TouchableOpacity} from 'react-native';
+import {View, Text, ScrollView, TouchableOpacity, StatusBar} from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -33,6 +33,7 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="#F8F8F8" />
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text style={[styles.normalText, {paddingHorizontal: 15}]}>
           Bem vindo ao Marvel Heroes
