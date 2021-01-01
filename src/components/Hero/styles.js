@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    height: 240,
+    height: 230,
     width: 140,
     padding: 10,
     marginHorizontal: 10,
@@ -12,13 +12,16 @@ const styles = StyleSheet.create({
   },
 
   alterEgo: {
-    fontSize: 14,
-    color: 'white',
+    fontSize: 10,
+    color: '#fff',
+    opacity: 0.75,
+    fontFamily: 'gilroy-medium',
   },
 
   name: {
-    fontSize: 22,
+    fontSize: 20,
     color: 'white',
+    fontFamily: 'gilroy-heavy',
   },
 });
 

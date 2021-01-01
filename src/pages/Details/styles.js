@@ -13,45 +13,55 @@ const styles = StyleSheet.create({
   },
 
   alterEgo: {
-    color: 'white',
     fontSize: 16,
+    color: '#fff',
+    opacity: 0.75,
     paddingHorizontal: 15,
+    fontFamily: 'gelroy-medium',
   },
 
   name: {
-    color: 'white',
-    fontSize: 34,
+    color: '#fff',
+    fontSize: 40,
     paddingHorizontal: 15,
+    fontFamily: 'gelroy-heavy',
   },
 
   caracteristics: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    flexWrap: 'wrap',
     paddingVertical: 10,
     paddingHorizontal: 15,
     marginTop: 25,
   },
 
   caracteristicsItem: {
-    marginVertical: 10,
-    color: 'white',
+    color: '#fff',
+    marginVertical: 12,
+    fontFamily: 'gelroy-medium',
   },
 
   biography: {
-    color: 'white',
+    color: '#fff',
     paddingHorizontal: 15,
     textAlign: 'justify',
+    fontSize: 14,
+    fontFamily: 'gelroy-medium'
   },
 
   title: {
-    color: 'white',
+    color: '#fff',
     marginVertical: 15,
     fontSize: 18,
+    fontFamily: 'gelroy-bold',
     paddingHorizontal: 15,
   },
 
   abilitiesTitle: {
-    color: 'white',
+    color: '#fff',
+    fontSize: 12,
+    fontFamily: 'gelroy-regular' ,
     width: 100,
     opacity: 0.75,
   },
@@ -64,19 +74,19 @@ const styles = StyleSheet.create({
   },
 
   barLess: {
-    width: '1%',
+    width: 1,
     height: '70%',
     backgroundColor: 'white',
   },
 
   barEqual: {
-    width: '1%',
+    width: 1,
     height: '100%',
     backgroundColor: 'white',
   },
 
   barMore: {
-    width: '1%',
+    width: 1,
     height: '70%',
     backgroundColor: 'white',
     opacity: 0.25,
@@ -85,7 +95,7 @@ const styles = StyleSheet.create({
   movie: {
     marginHorizontal: 10,
     width: 140,
-    height: 240,
+    height: 230,
     borderRadius: 15,
     overflow: 'hidden',
   },

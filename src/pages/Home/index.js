@@ -35,7 +35,7 @@ export default function Home() {
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#F8F8F8" />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Text style={[styles.normalText, {paddingHorizontal: 15}]}>
+        <Text style={[styles.normalText, {paddingHorizontal: 15, fontFamily: 'gilroy-semibold',}]}>
           Bem vindo ao Marvel Heroes
         </Text>
         <Text style={styles.title}>Escolha o seu personagem</Text>
@@ -92,8 +92,8 @@ export default function Home() {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.subtileContainer}>
-          <Text style={styles.subtitle}>Heróis</Text>
+        <View style={styles.categoryTitleContainer}>
+          <Text style={styles.categoryTitle}>Heróis</Text>
           <Text style={styles.normalText}>Ver tudo</Text>
         </View>
         <View style={styles.heroesContainer}>
@@ -104,8 +104,8 @@ export default function Home() {
           </ScrollView>
         </View>
 
-        <View style={styles.subtileContainer}>
-          <Text style={styles.subtitle}>Vilões</Text>
+        <View style={styles.categoryTitleContainer}>
+          <Text style={styles.categoryTitle}>Vilões</Text>
           <Text style={styles.normalText}>Ver tudo</Text>
         </View>
         <View style={styles.heroesContainer}>
@@ -116,8 +116,8 @@ export default function Home() {
           </ScrollView>
         </View>
 
-        <View style={styles.subtileContainer}>
-          <Text style={styles.subtitle}>Anti-heróis</Text>
+        <View style={styles.categoryTitleContainer}>
+          <Text style={styles.categoryTitle}>Anti-heróis</Text>
           <Text style={styles.normalText}>Ver tudo</Text>
         </View>
         <View style={styles.heroesContainer}>
@@ -128,8 +128,8 @@ export default function Home() {
           </ScrollView>
         </View>
 
-        <View style={styles.subtileContainer}>
-          <Text style={styles.subtitle}>Alienígenas</Text>
+        <View style={styles.categoryTitleContainer}>
+          <Text style={styles.categoryTitle}>Alienígenas</Text>
           <Text style={styles.normalText}>Ver tudo</Text>
         </View>
         <View style={styles.heroesContainer}>
@@ -140,8 +140,8 @@ export default function Home() {
           </ScrollView>
         </View>
 
-        <View style={styles.subtileContainer}>
-          <Text style={styles.subtitle}>Humanos</Text>
+        <View style={styles.categoryTitleContainer}>
+          <Text style={styles.categoryTitle}>Humanos</Text>
           <Text style={styles.normalText}>Ver tudo</Text>
         </View>
         <View style={styles.heroesContainer}>

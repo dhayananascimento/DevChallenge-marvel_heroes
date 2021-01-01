@@ -56,14 +56,14 @@ export default function Details({route}) {
 
           <View style={styles.caracteristics}>
             <View style={{alignItems: 'center'}}>
-              <Age />
+              <Age opacity={0.6} />
               <Text style={styles.caracteristicsItem}>
                 {year - data.caracteristics.birth} anos
               </Text>
             </View>
 
             <View style={{alignItems: 'center'}}>
-              <Weight />
+              <Weight opacity={0.6} />
               <Text style={styles.caracteristicsItem}>
                 {data.caracteristics.weight.value}
                 {data.caracteristics.weight.unity}
@@ -71,14 +71,14 @@ export default function Details({route}) {
             </View>
 
             <View style={{alignItems: 'center'}}>
-              <Height />
+              <Height opacity={0.6} />
               <Text style={styles.caracteristicsItem}>
                 {data.caracteristics.height.value.toFixed(2)}m
               </Text>
             </View>
 
             <View style={{alignItems: 'center'}}>
-              <Universe />
+              <Universe opacity={0.6} />
               <Text style={styles.caracteristicsItem}>
                 {data.caracteristics.universe}
               </Text>
