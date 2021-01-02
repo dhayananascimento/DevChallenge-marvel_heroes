@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     width: 140,
     padding: 10,
     marginHorizontal: 10,
+
     borderRadius: 15,
     overflow: 'hidden',
     justifyContent: 'flex-end',

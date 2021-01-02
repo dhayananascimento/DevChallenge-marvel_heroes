@@ -7,6 +7,7 @@ import Age from '../../assets/icons/age.svg';
 import Universe from '../../assets/icons/universe.svg';
 import Weight from '../../assets/icons/weight.svg';
 import Height from '../../assets/icons/height.svg';
+import Ability from '../../components/Ability/index.js';
 
 export default function Details({route}) {
   const {data, movies, background} = route.params;
@@ -47,24 +48,28 @@ export default function Details({route}) {
   }
 
   return (
-    <View style={{flex: 1, backgroundColor: 'black'}}>
-      <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+    <View style={styles.container}>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
       <ScrollView showsVerticalScrollIndicator={false}>
         <ImageBackground source={background} style={styles.imageBackground}>
           <Text style={styles.alterEgo}>{data.alterEgo}</Text>
           <Text style={styles.name}>{data.name.replace(' ', '\n')}</Text>
 
-          <View style={styles.caracteristics}>
+          <View style={styles.characteristics}>
             <View style={{alignItems: 'center'}}>
               <Age opacity={0.6} />
-              <Text style={styles.caracteristicsItem}>
+              <Text style={styles.characteristicsItem}>
                 {year - data.caracteristics.birth} anos
               </Text>
             </View>
 
             <View style={{alignItems: 'center'}}>
               <Weight opacity={0.6} />
-              <Text style={styles.caracteristicsItem}>
+              <Text style={styles.characteristicsItem}>
                 {data.caracteristics.weight.value}
                 {data.caracteristics.weight.unity}
               </Text>
@@ -72,14 +77,14 @@ export default function Details({route}) {
 
             <View style={{alignItems: 'center'}}>
               <Height opacity={0.6} />
-              <Text style={styles.caracteristicsItem}>
+              <Text style={styles.characteristicsItem}>
                 {data.caracteristics.height.value.toFixed(2)}m
               </Text>
             </View>
 
             <View style={{alignItems: 'center'}}>
               <Universe opacity={0.6} />
-              <Text style={styles.caracteristicsItem}>
+              <Text style={styles.characteristicsItem}>
                 {data.caracteristics.universe}
               </Text>
             </View>
@@ -90,46 +95,11 @@ export default function Details({route}) {
 
         <Text style={styles.title}>Habilidades</Text>
         <View style={{paddingHorizontal: 15}}>
-          <View style={styles.abilities}>
-            <Text style={styles.abilitiesTitle}>Força</Text>
-            <View style={styles.barsContainer}>
-              {force.map((item, index) => {
-                return <View key={index} style={item} />;
-              })}
-            </View>
-          </View>
-          <View style={styles.abilities}>
-            <Text style={styles.abilitiesTitle}>Inteligência</Text>
-            <View style={styles.barsContainer}>
-              {intelligence.map((item, index) => {
-                return <View key={index} style={item} />;
-              })}
-            </View>
-          </View>
-          <View style={styles.abilities}>
-            <Text style={styles.abilitiesTitle}>Agilidade</Text>
-            <View style={styles.barsContainer}>
-              {agility.map((item, index) => {
-                return <View key={index} style={item} />;
-              })}
-            </View>
-          </View>
-          <View style={styles.abilities}>
-            <Text style={styles.abilitiesTitle}>Resistência</Text>
-            <View style={styles.barsContainer}>
-              {endurance.map((item, index) => {
-                return <View key={index} style={item} />;
-              })}
-            </View>
-          </View>
-          <View style={styles.abilities}>
-            <Text style={styles.abilitiesTitle}>Velocidade</Text>
-            <View style={styles.barsContainer}>
-              {velocity.map((item, index) => {
-                return <View key={index} style={item} />;
-              })}
-            </View>
-          </View>
+          <Ability title="Força" bars={force} />
+          <Ability title="Inteligência" bars={intelligence} />
+          <Ability title="Agilidade" bars={agility} />
+          <Ability title="Resistência" bars={endurance} />
+          <Ability title="Velocidade" bars={velocity} />
         </View>
 
         <Text style={styles.title}>Filmes</Text>

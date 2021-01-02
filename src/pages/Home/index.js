@@ -1,13 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, ScrollView, TouchableOpacity, StatusBar} from 'react-native';
-
-import LinearGradient from 'react-native-linear-gradient';
+import {View, Text, ScrollView, StatusBar} from 'react-native';
 
 import styles from './styles.js';
 
-import Hero from '../../components/Hero';
-
-import MarvelData from '../../services/application.json';
+import MarvelData from '../../utils/application.json';
 import {images} from '../../utils/util.js';
 
 import HeroIcon from '../../assets/icons/hero.svg';
@@ -15,6 +11,9 @@ import AntiheroIcon from '../../assets/icons/antihero.svg';
 import VillainIcon from '../../assets/icons/villain.svg';
 import AlienIcon from '../../assets/icons/alien.svg';
 import HumanIcon from '../../assets/icons/human.svg';
+
+import CategoryOptions from '../../components/CategoryOptions/index.js';
+import Category from '../../components/Category/index.js';
 
 export default function Home() {
   const [antiHeroes, setAntiHeroes] = useState([]);
@@ -34,123 +33,40 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#F8F8F8" />
+
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Text style={[styles.normalText, {paddingHorizontal: 15, fontFamily: 'gilroy-semibold',}]}>
-          Bem vindo ao Marvel Heroes
-        </Text>
+        <Text style={styles.welcome}>Bem vindo ao Marvel Heroes</Text>
         <Text style={styles.title}>Escolha o seu personagem</Text>
 
         <View style={styles.categories}>
-          <TouchableOpacity activeOpacity={0.6}>
-            <LinearGradient
-              start={{x: 0, y: 0}}
-              end={{x: 0, y: 1}}
-              colors={['#005BEA', '#00C6FB']}
-              style={[styles.category]}>
-              <HeroIcon />
-            </LinearGradient>
-          </TouchableOpacity>
+          <CategoryOptions colors={['#005BEA', '#00C6FB']}>
+            <HeroIcon />
+          </CategoryOptions>
 
-          <TouchableOpacity activeOpacity={0.6}>
-            <LinearGradient
-              start={{x: 0, y: 0}}
-              end={{x: 0, y: 1}}
-              colors={['#ED1D24', '#ED1F69']}
-              style={[styles.category]}>
-              <VillainIcon />
-            </LinearGradient>
-          </TouchableOpacity>
+          <CategoryOptions colors={['#ED1D24', '#ED1F69']}>
+            <VillainIcon />
+          </CategoryOptions>
 
-          <TouchableOpacity activeOpacity={0.6}>
-            <LinearGradient
-              start={{x: 0, y: 0}}
-              end={{x: 0, y: 1}}
-              colors={['#B224EF', '#7579FF']}
-              style={[styles.category]}>
-              <AntiheroIcon />
-            </LinearGradient>
-          </TouchableOpacity>
+          <CategoryOptions colors={['#B224EF', '#7579FF']}>
+            <AntiheroIcon />
+          </CategoryOptions>
 
-          <TouchableOpacity activeOpacity={0.6}>
-            <LinearGradient
-              start={{x: 0, y: 0}}
-              end={{x: 0, y: 1}}
-              colors={['#0BA360', '#3CBA92']}
-              style={[styles.category]}>
-              <AlienIcon />
-            </LinearGradient>
-          </TouchableOpacity>
+          <CategoryOptions colors={['#0BA360', '#3CBA92']}>
+            <AlienIcon />
+          </CategoryOptions>
 
-          <TouchableOpacity activeOpacity={0.6}>
-            <LinearGradient
-              start={{x: 0, y: 0}}
-              end={{x: 0, y: 1}}
-              colors={['#FF7EB3', '#FF758C']}
-              style={[styles.category]}>
-              <HumanIcon />
-            </LinearGradient>
-          </TouchableOpacity>
+          <CategoryOptions colors={['#FF7EB3', '#FF758C']}>
+            <HumanIcon />
+          </CategoryOptions>
         </View>
 
-        <View style={styles.categoryTitleContainer}>
-          <Text style={styles.categoryTitle}>Heróis</Text>
-          <Text style={styles.normalText}>Ver tudo</Text>
-        </View>
-        <View style={styles.heroesContainer}>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <Hero data={heroes[0]} images={images.heroes.spiderMan} />
-            <Hero data={heroes[1]} images={images.heroes.blackPanther} />
-            <Hero data={heroes[2]} images={images.heroes.ironMan} />
-          </ScrollView>
-        </View>
-
-        <View style={styles.categoryTitleContainer}>
-          <Text style={styles.categoryTitle}>Vilões</Text>
-          <Text style={styles.normalText}>Ver tudo</Text>
-        </View>
-        <View style={styles.heroesContainer}>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <Hero data={villains[0]} images={images.villains.redSkull} />
-            <Hero data={villains[1]} images={images.villains.drDoom} />
-            <Hero data={villains[2]} images={images.villains.greenGoblin} />
-          </ScrollView>
-        </View>
-
-        <View style={styles.categoryTitleContainer}>
-          <Text style={styles.categoryTitle}>Anti-heróis</Text>
-          <Text style={styles.normalText}>Ver tudo</Text>
-        </View>
-        <View style={styles.heroesContainer}>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <Hero data={antiHeroes[0]} images={images.antiHeroes.deadpool} />
-            <Hero data={antiHeroes[1]} images={images.antiHeroes.venom} />
-            <Hero data={antiHeroes[2]} images={images.antiHeroes.punisher} />
-          </ScrollView>
-        </View>
-
-        <View style={styles.categoryTitleContainer}>
-          <Text style={styles.categoryTitle}>Alienígenas</Text>
-          <Text style={styles.normalText}>Ver tudo</Text>
-        </View>
-        <View style={styles.heroesContainer}>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <Hero data={aliens[0]} images={images.aliens.thanos} />
-            <Hero data={aliens[1]} images={images.aliens.ronan} />
-            <Hero data={aliens[2]} images={images.aliens.talos} />
-          </ScrollView>
-        </View>
-
-        <View style={styles.categoryTitleContainer}>
-          <Text style={styles.categoryTitle}>Humanos</Text>
-          <Text style={styles.normalText}>Ver tudo</Text>
-        </View>
-        <View style={styles.heroesContainer}>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <Hero data={humans[0]} images={images.humans.howardStark} />
-            <Hero data={humans[1]} images={images.humans.maryJane} />
-            <Hero data={humans[2]} images={images.humans.happyHogan} />
-          </ScrollView>
-        </View>
+        <>
+          <Category title="Heróis" data={heroes} images={images.heroes} />
+          <Category title="Vilões" data={villains} images={images.villains} />
+          <Category title="Anti-heróis" data={antiHeroes} images={images.antiHeroes} />
+          <Category title="Alienígenas" data={aliens} images={images.aliens} />
+          <Category title="Humanos" data={humans} images={images.humans} />
+        </>
       </ScrollView>
     </View>
   );

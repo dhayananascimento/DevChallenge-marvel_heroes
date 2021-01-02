@@ -1,6 +1,6 @@
 export const images = {
-  heroes: {
-    spiderMan: {
+  heroes: [
+    {
       background: require('../assets/chars/spider-man.png'),
       movies: [
         require('../assets/movies/captain-america-3.jpg'),
@@ -11,7 +11,7 @@ export const images = {
       ],
     },
 
-    blackPanther: {
+    {
       background: require('../assets/chars/black-panther.png'),
       movies: [
         require('../assets/movies/captain-america-3.jpg'),
@@ -21,7 +21,7 @@ export const images = {
       ],
     },
 
-    ironMan: {
+    {
       background: require('../assets/chars/iron-man.png'),
       movies: [
         require('../assets/movies/iron-man-1.jpg'),
@@ -36,10 +36,10 @@ export const images = {
         require('../assets/movies/avengers-4.jpg'),
       ],
     },
-  },
+  ],
 
-  villains: {
-    redSkull: {
+  villains: [
+    {
       background: require('../assets/chars/red-skull.png'),
       movies: [
         require('../assets/movies/captain-america-1.jpg'),
@@ -47,7 +47,7 @@ export const images = {
       ],
     },
 
-    drDoom: {
+    {
       background: require('../assets/chars/dr-doom.png'),
       movies: [
         require('../assets/movies/fantastic-four-1.jpg'),
@@ -55,14 +55,14 @@ export const images = {
       ],
     },
 
-    greenGoblin: {
+    {
       background: require('../assets/chars/green-goblin.png'),
       movies: [require('../assets/movies/spider-man-1.jpg')],
     },
-  },
+  ],
 
-  antiHeroes: {
-    deadpool: {
+  antiHeroes: [
+    {
       background: require('../assets/chars/deadpool.png'),
       movies: [
         require('../assets/movies/deadpool-1.jpg'),
@@ -70,19 +70,19 @@ export const images = {
       ],
     },
 
-    venom: {
+    {
       background: require('../assets/chars/venom.png'),
       movies: [require('../assets/movies/venom.jpg')],
     },
 
-    punisher: {
+    {
       background: require('../assets/chars/punisher.png'),
       movies: [require('../assets/movies/punisher.jpg')],
     },
-  },
+  ],
 
-  aliens: {
-    thanos: {
+  aliens: [
+    {
       background: require('../assets/chars/thanos.png'),
       movies: [
         require('../assets/movies/guardians-of-the-galaxy-1.jpg'),
@@ -91,7 +91,7 @@ export const images = {
       ],
     },
 
-    ronan: {
+    {
       background: require('../assets/chars/ronan.png'),
       movies: [
         require('../assets/movies/captain-marvel.jpg'),
@@ -99,14 +99,14 @@ export const images = {
       ],
     },
 
-    talos: {
+    {
       background: require('../assets/chars/talos.png'),
       movies: [require('../assets/movies/captain-marvel.jpg')],
     },
-  },
+  ],
 
-  humans: {
-    howardStark: {
+  humans: [
+    {
       background: require('../assets/chars/howard-stark.png'),
       movies: [
         require('../assets/movies/captain-america-1.jpg'),
@@ -117,7 +117,7 @@ export const images = {
         require('../assets/movies/captain-america-3.jpg'),
       ],
     },
-    maryJane: {
+    {
       background: require('../assets/chars/mary-jane.png'),
       movies: [
         require('../assets/movies/spider-man-1.jpg'),
@@ -125,7 +125,7 @@ export const images = {
         require('../assets/movies/spider-man-3.jpg'),
       ],
     },
-    happyHogan: {
+    {
       background: require('../assets/chars/happy-hogan.png'),
       movies: [
         require('../assets/movies/iron-man-1.jpg'),
@@ -137,5 +137,5 @@ export const images = {
         require('../assets/movies/spider-man-far-from-home.jpg'),
       ],
     },
-  },
+  ],
 };

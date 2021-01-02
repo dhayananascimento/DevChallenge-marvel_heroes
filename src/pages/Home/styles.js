@@ -8,54 +8,27 @@ const styles = StyleSheet.create({
 
   title: {
     fontSize: 32,
-    color: "#313140",
+    color: '#313140',
     fontWeight: 'bold',
     fontFamily: 'gilroy-heavy',
-    paddingHorizontal: 15,
+
+    marginHorizontal: 15,
   },
 
-  normalText: {
-    color: '#B7B7C8',
+  welcome: {
     fontSize: 14,
-    fontFamily: 'gilroy-medium'
+    color: '#B7B7C8',
+    fontFamily: 'gilroy-semibold',
+
+    marginHorizontal: 15,
   },
 
   categories: {
     marginVertical: 20,
+    marginHorizontal: 15,
+
     flexDirection: 'row',
-    paddingHorizontal: 15,
     justifyContent: 'space-between',
-  },
-
-  category: {
-    width: 56,
-    height: 56,
-    borderRadius: 56 / 2,
-
-    backgroundColor: 'blue',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  categoryTitleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 15,
-  },
-
-  categoryTitle: {
-    fontSize: 18,
-    paddingTop: 15,
-    color: '#F2264B',
-    fontFamily: 'gilroy-bold',
-    paddingBottom: 10,
-  },
-
-  heroesContainer: {
-    width: '100%',
-    height: 240,
-    marginBottom: 10,
   },
 });
 
